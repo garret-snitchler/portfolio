@@ -7,14 +7,14 @@
 }
 
 .sidenav {
-  height: 100%; 
+  height: 100%;
   width: 160px;
   position: fixed;
   z-index: 1; /* Stay on top */
   top: 0;
   left: 0;
-  background-color: #111; 
-  overflow-x: hidden; /* Disable horizontal scroll */
+  background-color: #111;
+  overflow-x: hidden; 
   padding-top: 20px;
   display: flex;
   flex-direction: column;
@@ -23,7 +23,7 @@
 .sidenav p {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
-  font-size: 30px;
+  font-size: 25px;
   color: white;
   display: block;
 }
@@ -32,7 +32,7 @@
 .sidenav a {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 20px;
   color: #818181;
   display: block;
 }
@@ -53,8 +53,7 @@
 }
 
 .row {
-  /* padding-top: 2%; */
-  /* padding-bottom: 2%; */
+  padding: 2%;
   display: flex;
   flex-direction: column;
   justify-content: left;
@@ -62,7 +61,13 @@
 
 /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav p {font-size: 22px;}
-  .sidenav a {font-size: 18px;}
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav p {
+    font-size: 22px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
 }

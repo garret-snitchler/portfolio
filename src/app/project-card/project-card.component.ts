@@ -6,14 +6,14 @@ import { MatCardModule } from '@angular/material/card';
   standalone: true,
   imports: [MatCardModule],
   template: `
-    <mat-card>
+    <mat-card class="card" appearance="outlined">
       <mat-card-title>{{ projectTitle }}</mat-card-title>
       <mat-card-content>
         <p>{{ projectDescription }}</p>
       </mat-card-content>
     </mat-card>
   `,
-  // styleUrls: ['./project-card.component.css']
+  styleUrls: ['./project-card.component.css']
 })
 export class ProjectCardComponent {
   @Input() projectTitle!: string;

@@ -4,9 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Garret Snitchler</title>
-  <link rel="stylesheet" href="app.component.css">
 </head>
-<body style="background-color: rgb(255, 212, 132);">
+<body>
   <div class="sidenav">
     <p>Garret Snitchler's Website</p>
     <a href="app.component.html">Technical Projects</a>
@@ -20,48 +19,49 @@
       Technical Projects
     </p>
     <p>
-      I study Software Engineering and have worked on various projects for various groups. This is not a comprehensive list, but I wanted to showcase work that is either recent or notable to paint a picture of the sorts of things that I have done.
+      I study Software Engineering and have worked on various projects for various groups. This is not a comprehensive list, but I wanted to showcase work that is either recent or that paints a wider picture of the things that I've done.
     </p>
-    <a href="https://github.com/garret-snitchler">Github</a>
-    <app-project-card
-      [projectTitle]="'AI Chatbot'"
-      [projectDescription]="`
-      This work was done for a corporation, so I won't name too many specifics. However, using Microsoft Azure to connect to an OpenAI subscription,
-      myself and my team were able to create an in-house chatbot powered by generative AI. This chatbot was fed on internal documentation to make it easier for new and old
-      employees alike to quickly reference protocols and other information that can otherwise require a lot of digging. Additionally, the tool was capable
-      of citing the documents it was getting its information from and could have new information sources added to it through an administrator view. 
-      `"
-    ></app-project-card>
     <div class="row">
-      <p class="subheading">AI Chatbot</p>
-      <p>
+      <app-project-card
+        [projectTitle]="'AI Chatbot'"
+        [projectDescription]="`
         This work was done for a corporation, so I won't name too many specifics. However, using Microsoft Azure to connect to an OpenAI subscription,
         myself and my team were able to create an in-house chatbot powered by generative AI. This chatbot was fed on internal documentation to make it easier for new and old
         employees alike to quickly reference protocols and other information that can otherwise require a lot of digging. Additionally, the tool was capable
         of citing the documents it was getting its information from and could have new information sources added to it through an administrator view. 
-      </p>
-      <!-- we might have an image here? -->
+        `"
+      ></app-project-card>
     </div>
     <div class="row">
-      <p class="subheading">Automatic Email Notification System</p>
-      <p>
-        This work was done for a corporation, so I won't name too many specifics. However, I led a team that created an automatic email notification system.
-        This system used Snowflake to access the company's database. By using Snowflake to register changes in the data, we were able to then connect to the company's
-        in-house email messaging API to then send notifications to employees about when certain tasks they were waiting on had been completed. Also with Snowflake,
-        we would find the email address of the specific employee that the task was relevant to to avoid spamming an entire office or role over something only one person
-        would care about. This project is ongoing and we are currently working to get this system set up on Kubernetes. 
-      </p>
+      <app-project-card
+        [projectTitle]="'Automatic Email Notification System'"
+        [projectDescription]="`
+          This work was done for a corporation, so I won't name too many specifics. However, I led a team that created an automatic email notification system.
+          This system used Snowflake to access the company's database. By using Snowflake to register changes in the data, we were able to then connect to the company's
+          in-house email messaging API to then send notifications to employees about when certain tasks they were waiting on had been completed. Also with Snowflake,
+          we would find the email address of the specific employee that the task was relevant to to avoid spamming an entire office or role over something only one person
+          would care about. This project is ongoing and we are currently working to get this system set up on Kubernetes. 
+        `"
+      ></app-project-card>
     </div>
     <div class="row">
-      <p class="subheading">Tic Tac Toe in Godot</p>
-      <p>
-        This was some solo game development work I did as a personal project. My goal was to get more comfortable with game development and Godot as a game engine.
-        I used the familiar game of Tic Tac Toe as a blueprint and then began work on all of the different work that would go into making it as functional on a 
-        computer as it would be on a piece of paper. This involved getting assets into the game, learning gdscript, scene management, and more. After initial functionality
-        was established, I tried to put as much quality of life into the game as possible, though ultimately never went as far as setting up multiplayer. I ended
-        the project by teaching myself how to export a game into an executable format in order to make things more user friendly. 
-      </p>
+      <app-project-card
+        [projectTitle]="'Tic Tac Toe in Godot'"
+        [projectDescription]="`
+          This was some solo game development work I did as a personal project. My goal was to get more comfortable with game development and Godot as a game engine.
+          I used the familiar game of Tic Tac Toe as a blueprint and then began work on all of the different work that would go into making it as functional on a 
+          computer as it would be on a piece of paper. This involved getting assets into the game, learning gdscript, scene management, and more. After initial functionality
+          was established, I tried to put as much quality of life into the game as possible, though ultimately never went as far as setting up multiplayer. I ended
+          the project by teaching myself how to export a game into an executable format in order to make things more user friendly. 
+        `"
+      ></app-project-card>
     </div>
+    <a mat-raised-button color="primary" href="https://github.com/garret-snitchler" target="_blank" rel="noopener">
+      <span class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path></svg>
+      </span>
+      My GitHub
+    </a>
   </div>
 </body>
 </html>
