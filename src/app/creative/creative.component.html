@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <p class="heading">
+    Creative Writing
+  </p>
+  <p>
+    I'd consider myself to be at an amateur level, but I enjoy writing short fiction. This is some of the work that I've written and finished. I write a lot of crime and horror, so some of the concepts and events that I write about may be disturbing. I provide descriptions/author's notes on each work, but feel free to skip those if you just want to dive into something.
+  </p>
+  <ul>
+    <li *ngFor="let doc of documents">
+      <div class="row">
+        <app-project-card
+          [projectTitle]=doc.id
+          [projectDescription]=doc.description
+          [isStory]=true
+        ></app-project-card>
+      </div>
+    </li>
+  </ul>
+</body>
