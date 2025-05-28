@@ -10,11 +10,11 @@ const routeConfig: Routes = [
     path: 'documents/:docID',
     component: PdfViewerComponent
   },
-  {
-    path: '',
-    component: WelcomeComponent,
-    title: 'Welcome'
-  },
+  // { the welcome page is kind of bad so we are not going to have it anymore
+  //   path: '',
+  //   component: WelcomeComponent,
+  //   title: 'Welcome'
+  // },
   {
     path: 'technical',
     component: TechnicalComponent,
@@ -30,7 +30,7 @@ const routeConfig: Routes = [
     component: MeComponent,
     title: "About Me"
   },
-  { path: '**', redirectTo: '', pathMatch: 'full' },
+  { path: '**', redirectTo: 'technical', pathMatch: 'full' },
 ];
 
 export default routeConfig;
