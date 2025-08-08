@@ -12,6 +12,7 @@ import { RouterLink } from '@angular/router';
       <mat-card-title>{{ projectTitle }}</mat-card-title>
       <mat-card-content>
         <p>{{ projectDescription }}</p>
+        Check it out <a *ngIf=externalLink href={{externalLink}}>here</a>!
         <a *ngIf="isStory" [routerLink]="['/documents', projectTitle]">Read Here</a>
       </mat-card-content>
     </mat-card>
@@ -22,4 +23,5 @@ export class ProjectCardComponent {
   @Input() projectTitle!: string;
   @Input() projectDescription!: string;
   @Input() isStory!: boolean;
+  @Input() externalLink !: string;
 }
